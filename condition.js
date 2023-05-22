@@ -66,7 +66,8 @@ function whoissame(tab) {
     let count = new Array(value.length + 1);
     for (let i = 0; i < tab.length; i++) {
         if (count[tab[i]] > 0) {
-            count[tab[i]]++;
+            
+           count[tab[i]]++;
         }
         else {
             count[tab[i]] = 1;
@@ -76,11 +77,12 @@ function whoissame(tab) {
 };
 
 console.log(whoisbigpropre((whoissame(roll(dice, value)))));
+
 console.log("Day")
 
 let week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-let daynr = 26;
-let firstday =1;
+let daynr = 260;
+let firstday =5;
 
 function Dayofweek(daynr, firstday) {
     let weeknr = Math.floor((daynr) / 7);
