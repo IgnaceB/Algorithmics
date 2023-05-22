@@ -117,3 +117,21 @@ function day(trueday) {
 };
 
 day(Dayofweek(daynr, firstday));
+
+console.log("printery")
+let price=[0.1,0.11,0.12]
+let qty=0
+
+function total(price,qty) {
+    if (qty<10){
+        return price[2]*qty;
+    }
+    else if (qty<20){
+        return price[1]*qty;
+    }
+    else {
+        return qty*price[0];
+    }
+};
+console.log(total(price,15));
+
