@@ -1,3 +1,4 @@
+console.log("Tarif-réduit")
 let full = 10;
 let red = 8;
 let tar = "tred";
@@ -12,6 +13,7 @@ function tarif() {
 
 tarif();
 
+console.log("plus grand")
 let tab = [3, 5, 6, 2, 1, 9, 10, 25];
 
 
@@ -46,9 +48,10 @@ function whoisbigpropre(tab) {
     return (max)
 };
 console.log(whoisbigpropre(tab));
+console.log("dés")
 
 let dice = 10000
-let value = [1, 2, 3,4,5,6]
+let value = [1, 2, 3, 4, 5, 6]
 function roll(dice, tab) {
     let values = new Array();
     for (let i = 0; i < dice; i++) {
@@ -57,7 +60,6 @@ function roll(dice, tab) {
     return values;
 }
 
-//console.log(roll(dice,value));
 
 function whoissame(tab) {
     console.log(tab)
@@ -74,3 +76,44 @@ function whoissame(tab) {
 };
 
 console.log(whoisbigpropre((whoissame(roll(dice, value)))));
+console.log("Day")
+
+let week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+let daynr = 26;
+let firstday =1;
+
+function Dayofweek(daynr, firstday) {
+    let weeknr = Math.floor((daynr) / 7);
+    let weekdays = weeknr * 7;
+    if (firstday > (daynr - weekdays)) {
+        return (daynr - weekdays - firstday + 7)
+    }
+    else {
+        return ((daynr - weekdays - firstday));
+    }
+};
+
+trueday = Dayofweek(daynr, firstday);
+console.log(trueday);
+
+function day(trueday) {
+    switch (trueday) {
+        case (1): console.log("Monday");
+            break;
+        case (2): console.log("Tuesday");
+            break;
+        case (3): console.log("Wednesday");
+            break;
+        case (4): console.log("Thursday");
+            break;
+        case (5): console.log("Friday");
+            break;
+        case (6): console.log("Saturday");
+            break;
+        case (0): console.log("Sunday");
+            break;
+
+    }
+};
+
+day(Dayofweek(daynr, firstday));
